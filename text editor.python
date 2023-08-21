@@ -1,0 +1,13 @@
+from textblob import TextBlob
+from tkinter import *def checkSpelling():
+c = text.get()
+a=c.lower()
+b = TextBlob(a) 
+correctedText.set("The corrected word is: "+str(b.correct())) #Showing the corrected wordwin = Tk()
+win.title("Spell Checker")
+win.geometry(700x350')
+win.config(bg='Slate Gray 1')text-StringVar(win)
+correctedText =StringVar(win)Label(win, text='SPELLING CORRECTION', bg='Slate Gray 1', fg='gray30', font=('Colonna MT', 34,'bold')).place(x=120, y=10)Label(win, text='Please enter the word',bg='Slate Gray 1',font=('Bookman Old Style',20,'normal'), anchor="e", justify=LEFT).place(x=20, y=90) Entry(win,textvariable=text, width=55,font=('Bookman Old Style', 28, 'normal')).place(x=20,y=130)|opLabel = Label (win, textvariable-correctedText, bg='Slate Gray 1',anchor="e",font=("Bookman Old Style',28,'normal'), justify=LEFT).place(x=20, y=270) #Button to do the spell check
+|Button(win, text="Check", bg="Slate Gray4',font=('calibre', 18),
+command=checkSpelling).place(x=230, y=200)
+win.mainloop()
